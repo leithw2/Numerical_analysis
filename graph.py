@@ -9,12 +9,15 @@ import matplotlib as plt
 
 def main():
     yAxis=[]
-    graphRange = arange(0, 1, .01)
+    graphRange = arange(-10, 21, .1)
 
-    for x in arange(0, 1, .01):
+    for x in arange(-10, 21, .1):
         #yAxis.append(2.7182**x)
 
-        y = exp(1)**(x**2)
+        #y = exp(1)**(x**2)
+        y = x - sym.tan(x)
+        #y = x**3 - 10*x**2 + 5
+
         yAxis.append(y)
         print (y)
 
@@ -29,6 +32,9 @@ def main():
 
 
     plot(graphRange,yAxis)
+    plot(0.0, 0, color='red', marker='o',
+            linestyle='None', markersize=6)
+    grid()
     show()
 
 
