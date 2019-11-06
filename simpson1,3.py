@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import numpy as np
-import matplotlib.pyplot as plt
+from pylab import *
+import matplotlib as plt
 import math
 import sympy as sym
 
@@ -33,7 +34,14 @@ def main():
 	#----------------------
     valueIntegral = IrapezoidalIntegral(f_x,less_limit,high_limit,divitions)
     print (valueIntegral)
-    plot(yAxis[0],yAxis[1])
+
+    values=[]
+    graphRange = arange(less_limit - less_limit * .1, high_limit + high_limit * .1, .1)
+
+    for value in graphRange:
+        values.append(f_x.subs(x,value))
+
+    plot(values,graphRange)
     show()
 
 if __name__ == "__main__":

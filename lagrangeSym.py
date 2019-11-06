@@ -6,21 +6,11 @@ import math
 from pylab import *
 import matplotlib as plt
 
-
-#x = sym.Symbol('x')
-
-#f_x = sym.sin(3*x)/(1+3*x)
-
-#print (f_x.subs(x,1.2)).evalf()
-
 ydata=[]
 
 for i in arange(0 , 7.2, 1.2):
 
     ydata.append(np.sin(3*i)/(1+3*i))
-    #print i
-
-#print ydata
 
 data = np.array([ [0.0, ydata[0]],
                   [1.2, ydata[1]],

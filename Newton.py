@@ -15,7 +15,6 @@ def newton(xdata, ydata,   x):
     p = np.zeros((n,n))
     i = 0
     j = n-1
-
     return recu(x ,i ,j ,p )
 
 def recu(x ,i ,j ,p ):
@@ -25,24 +24,19 @@ def recu(x ,i ,j ,p ):
 
     n=len(xdata)-1
     if j == i:
-
-        print ("j = " + str(j)+ " " + "i = " + str(i))
-        print ("y= " + str(ydata[i]))
+        #print ("j = " + str(j)+ " " + "i = " + str(i))
+        #print ("y= " + str(ydata[i]))
         p[i][j] = ydata[i]
         return ydata[i]
-
 
     else:
 
         first = recu(x, i+1, j, p)
         second = recu(x, i, j-1, p)
         down = (xdata[j]-xdata[i])
-
         res = (first - second) / down
-
-        print ("j = " + str(j)+ " " + "i = " + str(i))
-        print (res)
-
+        #print ("j = " + str(j)+ " " + "i = " + str(i))
+        #print (res)
         p[i][j] = res
     print (p)
     return res
@@ -61,8 +55,7 @@ def main():
     ydata = data[1]
     print data
     x = sym.Symbol('x')
-    print(newton(xdata, ydata ,x))
-    #print sym.solve(poli,x)
+    newton(xdata, ydata ,x)
     return
 
 if __name__ == '__main__':
