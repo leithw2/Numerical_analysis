@@ -29,7 +29,7 @@ def d_backward(f_x, x_1,h):
 def d_central(f_x, x_1,h):
     x = sym.Symbol('x')
 
-    f_x =f_x
+    f_x = f_x
     x_1 = x_1
     h = h
     funcs = vars(math)
@@ -37,7 +37,7 @@ def d_central(f_x, x_1,h):
 	#dx_dy =  ( eval(f_x, funcs, dict( x=x_1+h)) - eval(f_x, funcs, dict( x=x_1-h))) / (2*h)
     dx_dy = (f_x.subs(x, x_1 + h) - f_x.subs(x, x_1 - h)) / (2 * h)
     return dx_dy
-
+'''
 def main():
 
     x = sym.Symbol('x')
@@ -83,3 +83,4 @@ if __name__ == "__main__":
     except ValueError:
         print (ValueError)
     pass
+'''
