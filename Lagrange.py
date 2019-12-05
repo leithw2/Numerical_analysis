@@ -46,26 +46,21 @@ def combination(val, xData, yData):
 
 def main():
 
-    sino = arange(-5, 5, .1)
-    '''
-    inData = np.array([[1,2],
-               [2,4],
-               [3,2],
-               [4,5],
-               [5,17],
-               [6,1],
-               [7,-2]])
+    #sino = arange(-5, 5, .1)
 
+    inData = np.array([[1548,4],
+               [-216, -24]])
+    '''
     inData = np.array([[0,0],
                [1,1],
                [2,4]])
     '''
-    inData = []
+    #inData = []
 
 
-    for z in sino:
+    #for z in sino:
         #print z
-        inData.append([z ,sin(z)])
+        #inData.append([z ,sin(z)])
 
 
     #print inData
