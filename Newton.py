@@ -9,7 +9,7 @@ import matplotlib as plt
 xdata = []
 ydata = []
 
-def newton(xdata, ydata,   x):
+def newtonInterpol(xdata, ydata,   x):
 
     n = len(xdata)
     p = np.zeros((n,n))
@@ -24,8 +24,6 @@ def recu(x ,i ,j ,p ):
 
     n=len(xdata)-1
     if j == i:
-        #print ("j = " + str(j)+ " " + "i = " + str(i))
-        #print ("y= " + str(ydata[i]))
         p[i][j] = ydata[i]
         return ydata[i]
 
@@ -35,12 +33,10 @@ def recu(x ,i ,j ,p ):
         second = recu(x, i, j-1, p)
         down = (xdata[j]-xdata[i])
         res = (first - second) / down
-        #print ("j = " + str(j)+ " " + "i = " + str(i))
-        #print (res)
         p[i][j] = res
     print (p)
     return res
-
+'''
 def main():
     global xdata
     global ydata
@@ -65,3 +61,4 @@ if __name__ == '__main__':
     except ValueError:
         print ValueError
     pass
+'''

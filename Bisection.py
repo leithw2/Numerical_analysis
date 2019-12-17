@@ -4,16 +4,7 @@ import matplotlib.pyplot as plt
 import math
 import sympy as sym
 
-def main():
-
-    x = sym.Symbol('x')
-    f_x = x - sym.tan(x)
-    #f_x = x**3 - 10*x**2 + 5
-    #f_x = x - x**(1/3) - 2
-    print (f_x)
-    root(f_x,0,20)
-
-def root(f_x ,a ,b):
+def rootBisection(f_x ,a ,b):
     x = sym.Symbol('x')
     for k in range(20):
 

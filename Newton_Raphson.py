@@ -53,7 +53,7 @@ def main():
     plt.plot(x_y[:,0],x_y[:,2])
     plt.grid()
     plt.show()
-
+'''
 if __name__ == "__main__":
     print("Diferenciation --- Starting...\n\n")
     try:
@@ -61,3 +61,4 @@ if __name__ == "__main__":
     except ValueError:
         print (ValueError)
     pass
+'''

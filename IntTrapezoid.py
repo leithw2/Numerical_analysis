@@ -9,7 +9,7 @@ from pylab import *
 
 yAxis = ([],[])
 
-def IrapezoidalIntegral(f_x,less_limit,high_limit,divitions):
+def TrapezoidalIntegral(f_x,less_limit,high_limit,divitions):
     f_x=f_x
     a = less_limit
     b = high_limit
@@ -43,7 +43,8 @@ def IrapezoidalIntegral(f_x,less_limit,high_limit,divitions):
 
     valueIntegral = h2 / 2 *valueIntegral
     return valueIntegral
-
+'''
+Example:::::::
 def main():
 	#----------------------
 
@@ -93,3 +94,4 @@ if __name__ == "__main__":
 	except ValueError:
 		print (ValueError)
 	pass
+'''

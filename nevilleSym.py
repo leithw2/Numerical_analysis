@@ -41,7 +41,7 @@ def recu(x ,i ,j ,p ):
         print (sym.simplify(res))
 
     return res
-
+'''
 def main():
     global xdata
     global ydata
@@ -67,3 +67,4 @@ if __name__ == '__main__':
     except ValueError:
         print ValueError
     pass
+'''

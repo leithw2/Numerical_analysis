@@ -38,6 +38,7 @@ def d_central(f_x, x_1,h):
     dx_dy = (f_x.subs(x, x_1 + h) - f_x.subs(x, x_1 - h)) / (2 * h)
     return dx_dy
 '''
+Example::::
 def main():
 
     x = sym.Symbol('x')

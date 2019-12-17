@@ -6,18 +6,7 @@ import sympy as sym
 
 roots = []
 
-def main():
-
-    x = sym.Symbol('x')
-    f_x = -x**2 + 1
-    #f_x = sym.sin(5*x)
-
-    print (f_x)
-    level = 1
-    root(f_x,-3,5,level)
-    print(roots)
-
-def root(f_x ,a ,b,level):
+def rootBisectionMulti(f_x ,a ,b,level):
     global roots
     x = sym.Symbol('x')
     xm = a + (b-a) / 2
