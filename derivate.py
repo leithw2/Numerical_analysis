@@ -11,6 +11,7 @@ def d_forward(f_x, x_1,h):
     h = h
 	#funcs = vars(math)
 
+
 	#dx_dy =  ( eval(f_x, funcs, dict( x=x_1+h)) - eval(f_x, funcs, dict( x=x_1))) / h
     dx_dy = (f_x.subs(x, x_1 + h) - f_x.subs(x, x_1)) / h
 
